@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'PT Serif', serif;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.container {
+    height: 80vh;
+    display: flex;
+}
+
+img {
+    width: 15rem;
+    height: 22rem;
+    padding-bottom: 1rem;
+}
+
+.moviecontainer {
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.moviecontainer h3 {
+    text-align: center;
+    margin-bottom: 0.5rem
+}
+
+.block {
+    background-color: darkgrey;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    padding: 1rem 1.2rem;
+    border: 2px rgb(63, 62, 62) solid;
+    width: 18rem;
+}
+
+button {
+    margin-bottom: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: rgba(182, 58, 1, 0.443);
+}
+
+button:hover {
+    background-color: rgb(232, 72, 72);
+}
+
+@media (min-width: 600px) and (max-width: 1350px) {
+    .moviecontainer {
+        display: flex;
+        flex-direction: column;
+    }
+}
