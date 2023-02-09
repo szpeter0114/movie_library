@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,87 +10,22 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 </head>
+
 <body>
     <h1>Movie library</h1>
-<div class="container">
-    <div class="moviecontainer">
-
         <div id="app">
-            <button @click="toggleDesc">
-                <span v-if="showCover">Hide</span>
-                <span v-else>Show more</span>
-            </button>
-            <div class="block">
-                <div id="predator">
-                    <img v-bind:src="cover">
-                    <div v-if="showCover">
-                        <h3 >
-                            {{ title }} - {{ year }}
-                        </h3>
-                        <p>{{ plot }}</p>
+            <div class="moviecontainer" >
+                    <div class="block" v-for="(film, index) in titles" :key="index" @click="showInfo(index)">
+                            <img v-bind:src="covers[index]">
                     </div>
-                </div>
+            </div>
+
+            <div id="info">
+                <h3>{{ selectedTitle }}</h3>
+                <p>{{ selectedPlot }}</p>
+                <h3>{{ selectedYear }}</h3>
             </div>
         </div>
-
-        <div id="app2">
-            <button @click="toggleDesc">
-                <span v-if="showCover">Hide</span>
-                <span v-else>Show more</span>
-            </button>
-            <div class="block">
-                <div id="terminator2">
-                    <img v-bind:src="cover">
-                    <div v-if="showCover">
-                        <h3>
-                            {{ title }} - {{ year }}
-                        </h3>
-                        <p>{{ plot }}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="app3">
-            <button @click="toggleDesc">
-                <span v-if="showCover">Hide</span>
-                <span v-else>Show more</span>
-            </button>
-
-            <div class="block">
-                <div id="conan">
-                    <img v-bind:src="cover">
-                    <div v-if="showCover">
-                        <h3>
-                            {{ title }} - {{ year }}
-                        </h3>
-                        <p>{{ plot }}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="app4">
-            <button @click="toggleDesc">
-                <span v-if="showCover">Hide</span>
-                <span v-else>Show more</span>
-            </button>
-            <div class="block">
-
-                <div id="totalrecall">
-                    <img v-bind:src="cover">
-                    <div v-if="showCover">
-                        <h3>
-                            {{ title }} - {{ year }}
-                        </h3>
-                        <p>{{ plot }}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
 
 
     <script src="app.js"></script>
