@@ -42,28 +42,18 @@ img {
     cursor: pointer;
 }
 
+.block:hover {
+    transform: scale(1.05);
+    transition: 200ms;
+    border: yellow solid 1px;
+    box-shadow: rgba(255, 255, 0, 0.487) 2px 15px 15px 30px;
+}
+
 #info {
     margin: 0 auto;
     text-align: center;
     margin-top: 4rem;
     max-width: 50%;
-}
-
-button {
-    margin-bottom: 0.4rem;
-    padding: 0.4rem 0.8rem;
-    border-radius: 1rem;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-}
-
-button:active {
-    background-color: rgba(182, 58, 1, 0.443);
-}
-
-button:hover {
-    background-color: rgb(232, 72, 72);
 }
 
 @media (min-width: 600px) and (max-width: 1350px) {
